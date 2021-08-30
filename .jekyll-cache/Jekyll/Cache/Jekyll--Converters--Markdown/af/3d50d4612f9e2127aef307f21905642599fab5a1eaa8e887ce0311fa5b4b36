@@ -1,0 +1,20 @@
+I"√<p>Con solamente utilizar la terminal y algunas peque√±as herramientas nos podemos armar una
+pendrive de Winbug 10 desde Linux, , esto sirve para <code class="language-plaintext highlighter-rouge">Winbug 8, 8,1 y 10</code> sin embargo
+no funciona para <code class="language-plaintext highlighter-rouge">Winbug 7</code></p>
+
+<p>Aunque podria dar algunos errores aqui la lista de comandos por si falta alguna
+herramienta, despues de eso el proceso es bastante sencillo aunque tardara dependiendo
+de la velocidad de tu PC.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-L</span>  https://git.io/bootiso <span class="nt">-O</span>
+<span class="nb">sudo </span>apt <span class="nb">install </span>wimtools
+<span class="nb">sudo </span>apt <span class="nb">install </span>syslinux
+<span class="nb">sudo </span>apt <span class="nb">install </span>extlinux
+<span class="nb">sudo </span>apt <span class="nb">install </span>jq
+<span class="nb">sudo </span>apt <span class="nb">install </span>bc
+
+</code></pre></div></div>
+<p>Por supuesto no puede faltar el video, espero les sea de utilidad</p>
+
+<p><a href="another-page">Link hacia el video</a>.</p>
+:ET
