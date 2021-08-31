@@ -1,0 +1,78 @@
+I"�<p>Samba es un servidor de archivos y aunque puede parecer complejo en realidad solo requiere
+de algunas configuraciones basicas para poder funcionar sin problemas.</p>
+
+<p>Lo primero, instalamos Samba</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt <span class="nb">install </span>samba
+</code></pre></div></div>
+<p>Verificamos su estado…</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>systemctl status smbd
+</code></pre></div></div>
+<p>Deberia darnos algo asi:</p>
+
+<blockquote>
+  <p>smbd.service - Samba SMB Daemon
+ Loaded: loaded (/lib/systemd/system/smbd.service; disabled; vendor preset: disabled)
+ Active: inactive (dead)
+ Docs: man:smbd(8)
+       man:samba(7)
+       man:smb.conf(5)</p>
+</blockquote>
+
+<p>Bien, ahora por <code class="language-plaintext highlighter-rouge">seguridad</code> haremos un respaldo del archivo de configuracion de samba, esto
+es por si la cag*** podamos dejar todo como estaba. El archivo se encuentra 
+en <code class="language-plaintext highlighter-rouge">/etc/samba/smb.conf</code></p>
+
+<p>Tal cual hacemos..</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo cp</span> /etc/samba/smb.conf smb.conf.save
+</code></pre></div></div>
+
+<p>Con esto ya tendriamos nuestro respaldo hecho.</p>
+
+<p>Vamos a crear un directorio donde alojaremos los archivos que vamos a compartir:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">mkdir </span>files
+</code></pre></div></div>
+
+<p>Ahora debemos editar nuestro archivo de configuracion y al final agregamos lo siguiente:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">[</span>files]
+<span class="nv">path</span><span class="o">=</span>/home/user/files
+<span class="nv">browseable</span><span class="o">=</span> <span class="nb">yes
+</span><span class="nv">writeable</span><span class="o">=</span> <span class="nb">yes
+</span>only <span class="nv">guest</span><span class="o">=</span> no
+create <span class="nv">mask</span><span class="o">=</span>0777
+directory <span class="nv">mask</span><span class="o">=</span>0777
+<span class="nv">public</span><span class="o">=</span> no
+
+</code></pre></div></div>
+<p>Para que esto funcione, debemos de crear una contraseña para nuestro usuario, esta debe ser
+diferente a la utilizamos normalmente, por seguridad debe ser asi.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>smbpasswd <span class="nt">-a</span> usuario
+</code></pre></div></div>
+
+<p>Con esto practicamente ya tendriamos todo hecho</p>
+
+<p>Reinicamos el servicio Samba</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>systemctl restart smbd
+</code></pre></div></div>
+
+<p>Buscamos nuestro servicio, sabremos la IP y depaso veremos si nuestro servicio esta
+corriendo</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>findsmb
+</code></pre></div></div>
+
+<p>Utilizaremos <code class="language-plaintext highlighter-rouge">smbclient</code> para conectarnos al servidor</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>smbclient <span class="nt">-U</span> meta //192.168.0.28/files
+</code></pre></div></div>
+
+<p>Deberia de aparecernos algo asi</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>smb:<span class="se">\&gt;</span>
+</code></pre></div></div>
+:ET
