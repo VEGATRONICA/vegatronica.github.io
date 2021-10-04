@@ -4,7 +4,7 @@ published: true
 ---
 
 Con solamente utilizar la terminal y algunas pequeñas herramientas nos podemos armar una
-pendrive de Winbug 10 desde Linux, , esto sirve para `Winbug 8, 8,1 y 10` sin embargo
+pendrive de Winbug 10 desde Linux, , esto sirve para `Winbug 8, 8.1 y 10` sin embargo
 no funciona para `Winbug 7`
 
   Aunque podria dar algunos errores en la ejecucion aqui la lista de comandos por si falta 
