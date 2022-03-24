@@ -1,0 +1,9 @@
+I"d<p>Picom es una aplicacion para realizar transparencias, es muy utilizado en gestores de ventanas
+como <strong>i3</strong> , <strong>bspwn</strong> , etc.</p>
+
+<p>Instalarlo es simplemente ejecutar:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt install picom
+
+</code></pre></div></div>
+:ET
