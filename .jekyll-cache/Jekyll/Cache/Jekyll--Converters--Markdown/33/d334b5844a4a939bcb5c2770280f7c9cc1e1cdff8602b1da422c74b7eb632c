@@ -1,9 +1,11 @@
-I"»<p>Picom es una aplicacion para realizar transparencias, es muy utilizado en gestores de ventanas
+I"Š<p><a href="https://ibb.co/bm9nvqN"><img src="https://i.ibb.co/bm9nvqN/sapo-hd.jpg" alt="sapo-hd" border="0" /></a></p>
+
+<p>Picom es una aplicacion para realizar transparencias, es muy utilizado en gestores de ventanas
 como <strong>i3</strong> , <strong>bspwn</strong> , etc.</p>
 
 <p>Instalarlo es simplemente ejecutar:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt install picom
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$sudo apt install picom
 
 </code></pre></div></div>
 
@@ -12,8 +14,8 @@ en la consola al querer ejecutar, esto sucede que aunque se instala no existe el
 entonces solo queda crearlo, mas abajo he colocado el link del archivo, solo lo descargas y
 colocas en la siguiente direccion:</p>
 
-<pre><code class="language-/home/.config/picom/">
-</code></pre>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/home/.config/picom/
+</code></pre></div></div>
 <p>Con esto picom deberia de correr de manera normal y verse las transparencias</p>
 
 <p><a href="https://www.mediafire.com/file/cekeedbgfxex3rp/picom.conf/file">Descarga</a></p>

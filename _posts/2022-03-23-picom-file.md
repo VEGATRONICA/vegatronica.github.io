@@ -2,6 +2,7 @@
 title: Picom - Instalacion y configuracion en Debian
 published: true
 ---
+<a href="https://ibb.co/VtmV4vx"><img src="https://i.ibb.co/bPJ19rF/kali-logo.png" alt="kali-logo" border="0"></a>
 
 Picom es una aplicacion para realizar transparencias, es muy utilizado en gestores de ventanas
 como **i3** , **bspwn** , etc.
