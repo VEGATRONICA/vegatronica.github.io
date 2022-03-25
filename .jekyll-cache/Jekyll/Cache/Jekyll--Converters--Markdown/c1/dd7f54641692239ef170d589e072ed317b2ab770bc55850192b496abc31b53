@@ -1,0 +1,15 @@
+I"¥<p>Cuando descargamos algo de Mega y sobre todo algo pesado al poco nos salta el mensaje que hemos superado el limite
+de descarga permitido y tendremos que esperar(bastante) para seguir descargando donde nos quedamos u otra cosa,
+pero hay manera de hacer lo mismo en linux de lo que hacia <strong>megadownloader</strong> en winbug :)</p>
+
+<p>En primera necesitaremos una aplicacion llamada <strong>Megabasterd</strong> que corre en java la cual
+podemos descargar de aqui
+<a href="https://github.com/tonikelope/megabasterd/releases/tag/v7.50">Descarga</a></p>
+
+<p>Posteriormente debemos instalar 2 utilidades mas <strong>tor</strong> y <strong>privoxy</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$sudo</span> apt <span class="nb">install </span>tor
+<span class="nv">$sudo</span> apt <span class="nb">install </span>privoxy
+
+</code></pre></div></div>
+:ET
